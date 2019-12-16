@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-southeast-1:185692008093:task-definition/aws-module-service:11"
+        LoadBalancerInfo:
+          ContainerName: "module-service"
+          ContainerPort: "80"
+        PlatformVersion: "LATEST"

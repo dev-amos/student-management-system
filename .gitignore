@@ -1,0 +1,50 @@
+.DS_Store
+*/node_modules
+/.metadata/
+*/.env
+
+HELP.md
+ModuleService/bin/
+StudentService/bin/
+PaymentService/bin/
+ModuleService/target/
+StudentService/target/
+PaymentService/target/
+!ModuleService/.mvn/wrapper/maven-wrapper.jar
+!StudentService/.mvn/wrapper/maven-wrapper.jar
+!PaymentService/.mvn/wrapper/maven-wrapper.jar
+!ModuleService/**/src/main/**
+!StudentService/**/src/main/**
+!PaymentService/**/src/main/**
+!ModuleService/**/src/test/**
+!StudentService/**/src/test/**
+!PaymentService/**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+
+#test

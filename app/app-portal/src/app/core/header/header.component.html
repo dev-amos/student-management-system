@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">School Management System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div *ngIf="authService.isLoggedIn()" class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" (click)="routeToPage('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="routeToPage('class')">Class</a>
+        </li>
+      </ul> 
+    </div>
+    <a *ngIf="authService.isLoggedIn()" class="btn btn-lg btn-primary" (click)="authService.logout()" role="button">Log out</a>
+    
+  </nav>
+
+<!-- testing travis merge review    ss-->

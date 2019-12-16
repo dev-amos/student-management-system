@@ -1,0 +1,2 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1573208366800,128,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: text expected to contain /200/,1104,159,1,1,http://itsaruntimeterror.s3-website-ap-southeast-1.amazonaws.com/,124,0,67

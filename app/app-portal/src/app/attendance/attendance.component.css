@@ -1,0 +1,13 @@
+.alert {
+    padding: 5rem 1.25rem 1rem;
+    text-align: center
+}
+
+.alert:hover {
+    cursor: pointer;
+    background-color: #D9EDF7;
+}
+
+.jumbotron {
+    padding-top: 5%
+}

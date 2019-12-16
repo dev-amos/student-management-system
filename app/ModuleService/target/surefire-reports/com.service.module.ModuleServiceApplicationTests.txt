@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.service.module.ModuleServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.344 s - in com.service.module.ModuleServiceApplicationTests

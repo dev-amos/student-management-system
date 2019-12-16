@@ -1,0 +1,37 @@
+<div *ngIf="!paidSchoolFee" class="alert alert-danger" (click)="paySchoolFee()">
+  <strong>Notice!</strong> Please pay your school fee
+</div>
+
+<div class="container" style="padding-top: 5%; text-align: center">
+  <h1>Your attendance</h1>
+  <br>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Week</th>
+        <th>Session</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let module of module_list; let i = index">
+        <td>{{ module.weekId }}</td>
+        <td>{{ module.moduleId }}</td>
+        <div *ngIf="module.present">
+          <td>Present</td>
+        </div>
+        <div *ngIf="!module.present && i != module_list.length-1">
+          <td>Absent</td>
+        </div>
+        <div *ngIf="!module.present && i == module_list.length-1">
+          <td>
+            <button class="btn btn-success" (click)="updateAttendance(module.weekId)">
+              Present
+            </button>
+          </td>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

@@ -1,0 +1,23 @@
+<div *ngIf="!paidSchoolFee" class="alert alert-danger" (click)="paySchoolFee()">
+  <strong>Notice!</strong> Please pay your school fee
+</div>
+
+
+<div
+  class="jumbotron"
+  style="text-align: center; background-color: #fff; height: calc(95vh);"
+>
+  <h1>Your enrolled class</h1>
+  <h3 class="lead"></h3>
+  <br>
+  <div class="card-deck">
+    <div *ngFor="let class of classList" class="card bg-light">
+      <div class="card-body text-center">
+          <h3 class="card-title">{{ class.module_name }}</h3>
+        <h5 class="card-text">{{ class.module_id }} - {{ class.section_id }}</h5>
+        <br>
+        <a class="btn btn-lg btn-primary" (click)="goToAttendance(class.module_id, class.section_id)" role="button">Mark attendance</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div *ngIf="!paidSchoolFee" class="alert alert-danger" (click)="paySchoolFee()">
+  <strong>Notice!</strong> Please pay your school fee
+</div>
+
+<div
+  class="jumbotron"
+  style="text-align: center; background-color: #fff; height: calc(95vh);"
+>
+
+  <h1>Welcome {{ name }}</h1>
+  <h3 class="lead">
+    Life is very hard. It's harder if you don't take ITSA.
+  </h3>
+  <br />
+  <p>
+    Take the module. You will never regret.
+  </p>
+  <a class="btn btn-lg btn-primary" (click)="goToClass()" role="button"
+    >View enrolled class</a
+  >
+</div>
+

@@ -1,0 +1,5 @@
+com\service\student\StudentServiceApplication.class
+com\service\student\dao\StudentRepository.class
+com\service\student\controller\RTErrorController.class
+com\service\student\entity\Student.class
+com\service\student\controller\StudentController.class

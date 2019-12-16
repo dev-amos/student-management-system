@@ -1,0 +1,33 @@
+before_install: 
+  - cd ./ModuleService
+  - mvn -Dmaven.test.skip=true package 
+  - docker build -t moduleservice .
+  - cd ../sql_db
+  - docker build -t moduledatabase .  
+  - docker run -d -p 3306:3306 --name moduledatabase -e MYSQL_ROOT_PASSWORD=123 -e MYSQL_USER=user -e MYSQL_PASSWORD=456 moduledatabase
+  - sleep 10 
+  - docker run -d --name moduleservice -p 8080:8080 -e "SPRING_PROFILES_ACTIVE=travis" --link moduledatabase:mysql moduleservice
+  - cd ../app-portal
+
+sudo: required 
+language: java
+jdk:
+  - openjdk8
+language: node_js
+node_js:
+  - "v10.16.0"
+services:
+  - docker
+install:
+  - "npm install"
+  - "ng build"
+
+after_success:
+  - pip install --user awscli 
+  - export PATH=$PATH:$HOME/.local/bin 
+  - aws s3 mv dist/app-portal s3://itsaruntimeterror --recursive
+  # - aws codepipeline start-pipeline-execution --region ap-southeast-1 --name module-service
+
+branches:
+  only:
+    - develop

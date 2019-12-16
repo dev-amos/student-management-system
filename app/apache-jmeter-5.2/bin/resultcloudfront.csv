@@ -1,0 +1,5 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1573208471967,543,HTTP Request,200,OK,Thread Group 1-1,text,false,"Test failed: text expected to contain /200
+/",1787,262,1,1,https://d2x5gz3eiq3cid.cloudfront.net/,164,0,133
+1573208471967,169,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,text,true,,592,131,1,1,http://d2x5gz3eiq3cid.cloudfront.net/,164,0,133
+1573208472141,369,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,1195,131,1,1,https://d2x5gz3eiq3cid.cloudfront.net/,369,0,331

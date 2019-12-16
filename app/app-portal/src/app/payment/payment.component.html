@@ -1,0 +1,36 @@
+<div *ngIf="!paidSchoolFee" class="alert alert-danger" (click)="paySchoolFee()">
+  <strong>Notice!</strong> Please pay your school fee
+</div>
+
+
+<div *ngIf="status == 'success'"
+  class="jumbotron"
+  style="text-align: center; background-color: #fff; height: calc(95vh);"
+>
+
+  <h1>Thank you for paying your school fee.</h1>
+  <h3 class="lead">
+    Remember to pay earlier next time
+</h3>
+<br><br><br>
+<a class="btn btn-lg btn-success" routerLink="/home" role="button"
+>Go back to home page</a
+>
+</div>
+
+<div *ngIf="status == 'failure'"
+  class="jumbotron"
+  style="text-align: center; background-color: #fff; height: calc(95vh);"
+>
+
+  <h1>Your payment is unsuccessful. Please pay again!</h1>
+  <h3 class="lead">
+    Remember to pay earlier next time
+</h3>
+<br><br><br>
+
+<a class="btn btn-lg btn-danger" routerLink="/class" role="button"
+>Go back to home page</a
+>
+</div>
+
